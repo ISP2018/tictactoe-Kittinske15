@@ -7,7 +7,12 @@ import javafx.beans.property.Property;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.scene.Node;
 
-
+/**
+ * The model of tic-tac-toe game maintains state of the game.
+ * evaluates moves , and updates
+ * @author Kittin Vatabutr
+ *
+ */
 public class TicTacToeGame {
 	private final int boardsize;
 	/** View of the TicTacToe board. */
@@ -34,7 +39,7 @@ public class TicTacToeGame {
 	public void startNewGame() {
 		// Avoid nulls. Assign a "none" object to each location on the board.
 		for(int row=0; row<3; row++) 
-			for(int col=0; col<3; col++) pieces[row][col] = Piece.NONE;
+			for(int col=0; col<boardsize; col++) pieces[row][col] = Piece.NONE;
 		// Remove Pieces from the board (view), but not the squares themselves. Use a Predicate to test for Piece.
 		Predicate<Node> isPiece = (node) -> node instanceof Piece;
 		board.getChildren().removeIf(isPiece);
