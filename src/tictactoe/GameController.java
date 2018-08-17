@@ -1,6 +1,6 @@
 package tictactoe;
 
-import javafx.scene.Node;
+//import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -25,12 +25,12 @@ public class GameController {
 	
 
 	public GameController() {
-		// nothing to iniitialize yet.
+		// nothing to initialize yet.
 	}
 	
 	@FXML
 	public void initialize() {
-		game = new TicTacToeGame(3);
+		game = new TicTacToeGame(4);
 		Board board = game.getBoard();
 		// make the board size match the size of pane where it is shown
 		centerPane.getChildren().add(board);
