@@ -34,7 +34,6 @@ public class Main extends Application {
 		try {
 			FXMLLoader loader = new FXMLLoader(formURL);
 			Parent parent = loader.load();
-			GameController controller = loader.getController();
 			primaryStage.setTitle("Tic-Tac-Toe");
 			Scene scene = new Scene(parent);
 	        primaryStage.setScene(scene);
@@ -43,9 +42,8 @@ public class Main extends Application {
 		} catch (Exception ex) {
 			Logger.getLogger("Main").log(Level.SEVERE, "Exception initializing game: \n"+ex.getMessage(), ex);
 			// Does Logger.log() print the stacktrace?  If so, we don't need this:
-			ex.printStackTrace();
+//			ex.printStackTrace();
 			
-			return;
 		}
 	}
 

@@ -13,7 +13,7 @@ import javafx.scene.text.TextAlignment;
  * 
  * Piece extends StackPane so it can be placed on another pane.
  * 
- * @author jim
+ * @author Kittin Vatabutr
  *
  */
 public class Piece extends StackPane {
@@ -29,7 +29,7 @@ public class Piece extends StackPane {
 		this.text = new Text(type.text);
 		text.setStroke(Color.BLACK);
 		text.setStrokeWidth(0.04*size); // guess of appropriate thickness
-		text.setFont(new Font(0.85*size)); // smaller than board cell size to avoid expanding the board cell
+		text.setFont(new Font(0.65*size)); // smaller than board cell size to avoid expanding the board cell
 		text.setTextAlignment(TextAlignment.CENTER);
 		super.getChildren().add(text);
 	}
